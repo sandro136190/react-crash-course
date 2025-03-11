@@ -22,6 +22,7 @@ const PostsList = ({ isPosting, onStopPosting }) => {
           <NewPost
             onBodyChange={BodyChangeHandler}
             onAuthorChange={authorChangeHandler}
+            onCancel={onStopPosting}
           />
         </Modal>
       ) : null}
