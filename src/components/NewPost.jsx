@@ -32,7 +32,7 @@ function NewPost({ onCancel, onAddPost }) {
         <label htmlFor="name">Your name</label>
         <input type="text" id="name" required onChange={authorChangeHandler} />
       </p>
-      <p className={classes.action}>
+      <p className={classes.actions}>
         <button type="button" onClick={onCancel}>
           Cancel
         </button>
