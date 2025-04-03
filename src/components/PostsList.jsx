@@ -3,7 +3,7 @@ import Post from "./Post";
 import classes from "./PostsList.module.css";
 import { useLoaderData } from "react-router-dom";
 
-const PostsList = ({}) => {
+function PostsList() {
   const posts = useLoaderData();
 
   return (
@@ -11,7 +11,12 @@ const PostsList = ({}) => {
       {posts.length > 0 && (
         <ul className={classes.posts}>
           {posts.map((post) => (
-            <Post key={post.body} author={post.author} body={post.body} />
+            <Post
+              key={post.id}
+              id={post.id}
+              author={post.author}
+              body={post.body}
+            />
           ))}
         </ul>
       )}
@@ -23,6 +28,6 @@ const PostsList = ({}) => {
       )}
     </>
   );
-};
+}
 
 export default PostsList;

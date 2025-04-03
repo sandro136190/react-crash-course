@@ -29,7 +29,7 @@ function NewPost() {
 export default NewPost;
 
 export async function action({ request }) {
-  const fromData = await request.fromData();
+  const formData = await request.formData();
   const postData = Object.fromEntries(formData);
   await fetch("http://localhost:8080/posts", {
     method: "POST",
